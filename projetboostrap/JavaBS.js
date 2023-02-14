@@ -1,3 +1,6 @@
+const dropdownElementList = document.querySelectorAll('.dropdown-toggle')
+const dropdownList = [...dropdownElementList].map(dropdownToggleEl => new bootstrap.Dropdown(dropdownToggleEl))//
+
 const boton = document.querySelector("#boton");
 const foto = document.getElementById("foto");
 const nombre = document.getElementById("nombre");
@@ -22,5 +25,5 @@ const generarUsuario = async() => {
     }
 }
 
-boton.addEventListener("click", generarUsuario);
+// boton.addEventListener("click", generarUsuario);
 document.addEventListener("DOMContentLoaded", generarUsuario);
